@@ -5,15 +5,15 @@ function numheads(numberofflips){
 
         var x = Math.floor(Math.random()*2);
         if( x === 1){
-            console.log("its head");
+            document.write("its head");
 
         }
         else{
-            console.log("its tails");
+            document.write("its tails");
         }
     }
-    console.log("the no.of head is " + count);
+    document.write("the no.of head is " + count);
 
 }
 var numofflips = parseInt(prompt("please enter the number of flips:"), 10);
-numheads(numberofflips);
+numheads();
