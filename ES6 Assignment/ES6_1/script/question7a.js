@@ -1,7 +1,4 @@
 "use strict";
 var arrayNew = ['rio', 'mosco', 'tokyo', 'berlin'];
-for (var i in arrayNew) {
-    if (i === 'tokyo') {
-        console.log(i);
-    }
-}
+var a = arrayNew[0], b = arrayNew[1], c = arrayNew[2], d = arrayNew[3];
+console.log(c);
