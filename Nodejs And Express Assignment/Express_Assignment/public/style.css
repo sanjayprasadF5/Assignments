@@ -1,0 +1,9 @@
+body {
+  background: red;
+}
+
+h1 {
+  background: blue;
+  text-align: center;
+  font: size 33px;
+}

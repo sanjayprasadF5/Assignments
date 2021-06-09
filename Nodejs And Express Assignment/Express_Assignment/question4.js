@@ -1,12 +1,22 @@
 const express = require("express");
-
 const app = express();
+const moment = require("moment");
+const myArgs = process.argv;
 
-app.use("/", (req, res) => {
-  res.send("Hello World!");
+console.log("myArgs: ", myArgs);
+
+app.get("/", (req, res) => {
+  res.end("Hello World!");
 });
 
-const HOST = process.env.PORt || "localhost";
-const PORT = process.env.PORT || 3000;
+app.get("/time", (req, res) => {
+  let dateFormat = require("dateformat");
+  let now = new Date();
+  req.end(dateFormat(now, "yyyy-mm-dd'T'HH:MM:ss:l'Z'"));
+});
+console.log(process.env);
+const port = process.env.PORT || 3000;
 
-app.listen(PORT, HOST, console.log(`server is running ${PORT}`));
+app.listen(port, () => {
+  console.log(`Server is running${port}`);
+});

@@ -1,18 +1,15 @@
-const express = require('express');
+const express = require("express");
 
 const app = express();
-const age=[{
-    age:32}];
 
+const port = 3000;
 
-app.use('/year',(req, res) => {
-   const age=req.query.age;
-    res.send(
-        {
-            age:1984
-        }
-    )
+app.get("/year", (req, res) => {
+  let d = new Date();
+  let n = d.getFullYear();
+  res.send("You were born in " + (n - req.query.age));
+});
 
-const PORT = 3000;
-
-app.listen(PORT, console.log(`server is running ${PORT}`));
+app.listen(port, () => {
+  console.log(`Server running ${port}`);
+});
