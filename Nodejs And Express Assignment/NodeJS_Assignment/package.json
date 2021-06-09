@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "denver",
-  "license": "cg"
+  "license": "cg",
+  "dependencies": {
+    "concat-stream": "^2.0.0",
+    "moment": "^2.29.1",
+    "process": "^0.11.10",
+    "strftime": "^0.10.0"
+  }
 }
