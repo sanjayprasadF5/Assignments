@@ -3,11 +3,11 @@ const app = express();
 const Fruits = require("./Fruits");
 
 app.delete("/Fruits/", (req, res) => {
-  inventory = [];
-  if (inventory === null) {
+  Fruits = [];
+  if (Fruits === null) {
     res.send("Delete request Failed");
   } else {
-    res.send("Successfully deleted all items from the inventory");
+    res.send("Successfully deleted all items from the fruits list");
   }
 });
 

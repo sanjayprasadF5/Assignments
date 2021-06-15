@@ -10,9 +10,9 @@ app.post("/Fruits/", (req, res) => {
   var newItem = req.body;
   if (newItem) {
     Fruits.push(newItem);
-    res.send("Item added to inventory successfully.");
+    res.send("Item added to fruit list successfully.");
   } else {
-    res.send("Couldn't add item to inventory");
+    res.send("Couldn't add item to fruits");
   }
 });
 const port = process.env.PORT || 8081;

@@ -9,15 +9,15 @@ const app = express();
 // app.use(bodyParser.urlencoded({ extended: false }));
 // app.use(bodyParser.json());
 app.put("/Fruits/", (req, res) => {
-  var newInventory = req.body;
-  if (!newInventory) return res.status(404).json({ message: "Not Found" });
-  inventory = newInventory;
+  var newFruits = req.body;
+  if (!newFruits) return res.status(404).json({ message: "Not Found" });
+  Fruits = newFruits;
   res.send(Fruits);
 });
 
 app.put("/Fruits/:name", (req, res) => {
   var itemName = req.params.name;
-  var item = inventory.find((item) => item.name === itemName);
+  var item = Fruits.find((item) => item.name === itemName);
   if (!item) return res.status(404).json({ message: "Not Found" });
   if (req.body.name) {
     item.name = req.body.name;

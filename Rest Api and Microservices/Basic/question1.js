@@ -11,7 +11,7 @@ app.get("/api/Fruits", (req, res) => {
   res.send(Fruits);
 });
 
-//Get Single Fruit
+//Get Single Fruit from the list
 app.get("api/Fruits/:name", (req, res) => {
   var reqProduct = req.params.name;
   var product = Fruits.find((product) => product.name === reqProduct);
